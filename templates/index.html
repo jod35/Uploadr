@@ -11,5 +11,14 @@
         <p><input type="file" name="file" id="" multiple ></p>
         <p><input type="submit" value="Submit"></p>
     </form>
+    <br>
+    <div class="images">
+        
+        {% for image  in files %}
+            <img src="{{url_for('upload',filename=image)}}" alt="" width="200">
+
+        {% endfor %}
+            
+    </div>
 </body>
 </html>
